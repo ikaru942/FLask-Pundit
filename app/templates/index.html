@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Login and Registration Form Design</title>
+  <link rel="stylesheet" href='/static/style.css' />
+</head>
+<body>
+  <div class="login-page">
+  <div class="form">
+    <form class="register-form">
+    <input type="text" placeholder="user name"/>
+    <input type="text" placeholder="password"/>
+    <input type="text" placeholder="email"/>
+    <button>Login</button>
+
+    </form>
+
+    </div>
+    </div>
+
+  <div class="Sign-up">
+  <div class="form">
+    <form class="register-form">
+    <input type="text" placeholder="user name"/>
+    <input type="text" placeholder="password"/>
+    <button>Sign-up</button>
+
+    </form>
+
+    </div>
+    </div>
+
+<h1>Blog Example</h1>
+<a href="/Login">Login</a> <p>
+  <ul>
+  {%for blog in blogs %}
+    <li><h1>{{blog.title}}</h1></li>
+  {% endfor %}
+</ul>
+
+<a href="/adminOptions">Admin Options </a> <p>
+<a href="/userOptions">User Options </a> <p>
+
+</body>
+</html>
+
+
+
+
+
+<!--<a href="/firstEntry">Blog Post 1 </a> <p>
+<a href="/secondEntry">Blog Post 2 </a> <p>
+<a href="/thirdEntry">Blog Post 3 </a> <p>-->

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Register</h1>
+    <form action = "{{  url_for('confirm_user') }}" method = "POST">
+{#    , 'form.doc_link'#}
+{#    <form action="" method="post">#}
+{#        {{ form.hidden_tag() }}#}
+        <p>
+            {{ form.user_id.label }}<br>
+            {{ form.email_id(size=100) }}<br>
+            {% for error in form.user_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.user_id_conf.label }}<br>
+            {{ form.password_id_conf(size=50) }}<br>
+            {% for error in form.password_id_conf.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.full_name.label }}<br>
+            {{ form.full_name(size=64) }}<br>
+            {% for error in form.full_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
